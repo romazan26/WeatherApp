@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		30B099B92CBC789400737F74 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 30B099B82CBC789400737F74 /* SwiftUICharts */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		30EAB5332CBC4706004530EB /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,16 +40,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B099B92CBC789400737F74 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303F659F2CBC77DC002B5100 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30EAB52A2CBC4706004530EB = {
 			isa = PBXGroup;
 			children = (
 				30EAB5352CBC4706004530EB /* WeatherApp */,
+				303F659F2CBC77DC002B5100 /* Frameworks */,
 				30EAB5342CBC4706004530EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +91,7 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
+				30B099B82CBC789400737F74 /* SwiftUICharts */,
 			);
 			productName = WeatherApp;
 			productReference = 30EAB5332CBC4706004530EB /* WeatherApp.app */;
@@ -107,6 +121,9 @@
 			);
 			mainGroup = 30EAB52A2CBC4706004530EB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				30B099B72CBC789400737F74 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 30EAB5342CBC4706004530EB /* Products */;
 			projectDirPath = "";
@@ -341,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30B099B72CBC789400737F74 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/willdale/SwiftUICharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30B099B82CBC789400737F74 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30B099B72CBC789400737F74 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30EAB52B2CBC4706004530EB /* Project object */;
 }

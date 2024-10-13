@@ -22,7 +22,7 @@ struct MainView: View {
                     ForecastView(viewModel: viewModel)
                 }
             case .settings:
-                Text("Settings View")
+                ChartWeatherView(viewModel: viewModel)
             case .profile:
                 Text("Profile View")
             }
