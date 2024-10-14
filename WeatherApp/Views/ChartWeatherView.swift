@@ -25,9 +25,9 @@ struct ChartWeatherView: View {
                 
                 // Создание данных для графика
                 let barChartData = BarChartData(dataSets: createDataSet(data: dataEntries))
-                //let barChartData = BarChartData(dataSets: createGoodDataSet(data: forecastData))
                 
                 Spacer()
+                
                 // Отображение столбчатого графика
                 BarChart(chartData: barChartData)
                     .frame(height: 300)

@@ -19,6 +19,8 @@ struct ForecastView: View {
                             .font(.headline)
                         Text("Температура: \(item.main.temp, specifier: "%.1f")°C")
                         Text("Описание: \(item.weather.first?.description.capitalized ?? "Нет данных")")
+                        Text("Атмосферное давление: \(item.main.pressure, specifier: "%.1f") hPa")
+                        Text("Влажность: \(item.main.humidity, specifier: "%.1f")%")
                     }
                 }
             } else {
@@ -34,7 +36,7 @@ struct ForecastView: View {
         let date = Date(timeIntervalSince1970: timestamp)
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        formatter.timeStyle = .medium
         return formatter.string(from: date)
     }
 }

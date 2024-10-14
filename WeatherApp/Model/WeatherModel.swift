@@ -39,7 +39,7 @@ struct MainWeather: Codable {
     let temp: Double
     let pressure: Double
     let humidity: Double
-    // Другие параметры, если нужно
+    
 }
 
 // Структура для описания погоды
@@ -50,24 +50,6 @@ struct Weather: Codable {
     let icon: String
 }
 
-
-struct WeatherModel: Codable {
-    let main: Main
-    let weather: [Weather]
-    let name: String
-    
-    struct Main: Codable {
-        let temp: Double
-        let tempMin: Double
-        let tempMax: Double
-    }
-
-    struct Weather: Codable {
-        let description: String
-        let icon: String
-    }
-}
-
 struct WeatherForecastModel: Codable {
     let main: Main
     let weather: [Weather]
@@ -75,6 +57,8 @@ struct WeatherForecastModel: Codable {
     
     struct Main: Codable {
         let temp: Double
+        let tempMin: Double
+        let tempMax: Double
     }
     
     struct Weather: Codable {
@@ -101,8 +85,8 @@ struct WeatherResponse: Codable {
     // Структура для информации о погоде
     struct Weather: Codable {
         let id: Int                // ID погоды
-        let main: String           // Основной тип погоды (например, "Clear", "Rain")
-        let description: String     // Описание погоды (например, "ясно")
+        let main: String           // Основной тип погоды
+        let description: String     // Описание погоды
         let icon: String           // Код иконки погоды
     }
 
@@ -111,7 +95,7 @@ struct WeatherResponse: Codable {
         let temp: Double           // Температура в градусах Цельсия
         let pressure: Double        // Атмосферное давление
         let humidity: Double        // Влажность
-        // Можно добавить дополнительные параметры, если необходимо
+        
     }
 }
 

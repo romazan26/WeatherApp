@@ -16,7 +16,8 @@ struct CustomTabBar: View {
 
             // Central Button
             Button(action: {
-                // Действие для центральной кнопки (например, переход к главному экрану или добавление)
+                // Действие для центральной кнопки
+                selectedTab = .main
                 print("Central Button Pressed")
             }) {
                 Image(systemName: "plus")
@@ -30,8 +31,8 @@ struct CustomTabBar: View {
             }
             .padding(.bottom, 20)
 
+            TabBarButton(tab: .chart, selectedTab: $selectedTab)
             TabBarButton(tab: .settings, selectedTab: $selectedTab)
-            TabBarButton(tab: .profile, selectedTab: $selectedTab)
         }
         .padding()
         .background(Color.white)
@@ -66,15 +67,15 @@ struct TabBarButton: View {
 enum Tab {
     case main
     case forecast
+    case chart
     case settings
-    case profile
 
     var title: String {
         switch self {
         case .main: return "Main"
         case .forecast: return "Forecast"
+        case .chart: return "Chart"
         case .settings: return "Settings"
-        case .profile: return "Profile"
         }
     }
 
@@ -82,8 +83,8 @@ enum Tab {
         switch self {
         case .main: return "thermometer"
         case .forecast: return "calendar"
-        case .settings: return "gear"
-        case .profile: return "person"
+        case .chart: return "chart.bar.fill"
+        case .settings: return "gearshape"
         }
     }
 }

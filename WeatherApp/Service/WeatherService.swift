@@ -7,8 +7,6 @@
 
 import Foundation
 import CoreLocation
-///"c600c6c38269fe8d7f13e5ba0589febf"
-
 
 
 class WeatherService {

@@ -23,7 +23,6 @@ struct WeatherImage: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100)
             case .failure(let error):
-                // Выводим сообщение об ошибке
                 Text("Ошибка загрузки: \(error.localizedDescription)")
             @unknown default:
                 // На случай, если есть неизвестный случай

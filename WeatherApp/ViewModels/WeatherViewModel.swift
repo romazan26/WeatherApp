@@ -22,7 +22,7 @@ class WeatherViewModel: ObservableObject {
         weatherService.fetchWeatherByCityName(city: city) { [weak self] weather in
             self?.currentWeather = weather
         }
-        // Запрос прогноза погоды
+        
         fetchForecastByCityName(city: city)
     }
 

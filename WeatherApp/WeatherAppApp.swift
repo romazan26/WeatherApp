@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct WeatherAppApp: App {
-    @StateObject private var locationManager = LocationManager() // Экземпляр LocationManager
+    @StateObject private var locationManager = LocationManager()
     var body: some Scene {
         WindowGroup {
             MainView()
